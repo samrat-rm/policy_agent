@@ -1,0 +1,388 @@
+{
+  "summary": {
+    "tag": "openai-baseline",
+    "timestamp": "20261001-012054",
+    "model": "gpt-4o-mini",
+    "score": "19/20",
+    "accuracy_pct": 95.0,
+    "latency_p50": 5.0,
+    "latency_p95": 6.51,
+    "latency_mean": 5.13,
+    "avg_tool_calls": 2.7,
+    "by_category": {
+      "compute_cap": "7/7",
+      "compute_multi": "1/1",
+      "factual": "3/3",
+      "lookup_amount": "7/7",
+      "unanswerable": "1/2"
+    }
+  },
+  "records": [
+    {
+      "id": "q01",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 40000. How much do I get back?",
+      "expected_amount": 25000,
+      "got_amount": 25000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You will get back \u20b925,000 for the monitor you purchased. This is the maximum reimbursement cap for monitors.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 6.51,
+      "tool_calls": 5,
+      "approx_tokens": 784
+    },
+    {
+      "id": "q02",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 20000. What is my reimbursement?",
+      "expected_amount": 16000,
+      "got_amount": 16000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "Your reimbursement for the monitor is \u20b916,000. This amount is calculated as 80% of the purchase price, which is below the cap of \u20b925,000.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 5.73,
+      "tool_calls": 5,
+      "approx_tokens": 785
+    },
+    {
+      "id": "q03",
+      "category": "compute_cap",
+      "question": "I spent 12000 on an office chair. How much is reimbursed?",
+      "expected_amount": 7200,
+      "got_amount": 7200.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You will be reimbursed \u20b97,200 for the office chair. This amount is calculated as 60% of the purchase price, which is below the cap of \u20b915,000.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 5.94,
+      "tool_calls": 5,
+      "approx_tokens": 783
+    },
+    {
+      "id": "q04",
+      "category": "compute_cap",
+      "question": "I bought an office chair for 30000. How much do I get back?",
+      "expected_amount": 15000,
+      "got_amount": 15000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You will get back \u20b915,000 for the office chair you purchased. This is the maximum cap for reimbursement on office chairs.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 6.35,
+      "tool_calls": 5,
+      "approx_tokens": 786
+    },
+    {
+      "id": "q05",
+      "category": "compute_cap",
+      "question": "My desk cost 40000. What is my reimbursement?",
+      "expected_amount": 20000,
+      "got_amount": 20000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "Your reimbursement for the desk is capped at \u20b920,000. Since 60% of the purchase price is \u20b924,000, you will receive the maximum cap amount.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 5.52,
+      "tool_calls": 5,
+      "approx_tokens": 782
+    },
+    {
+      "id": "q06",
+      "category": "compute_multi",
+      "question": "I spent 12000 on an office chair and 30000 on a desk. What is my total reimbursement?",
+      "expected_amount": 25200,
+      "got_amount": 25200.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "The total reimbursement for the office chair and desk is \u20b925,200. This includes \u20b912,000 for the chair and \u20b918,000 for the desk, but both are capped at their respective limits.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 9.75,
+      "tool_calls": 8,
+      "approx_tokens": 1173
+    },
+    {
+      "id": "q07",
+      "category": "compute_cap",
+      "question": "I bought a keyboard for 5000. How much do I get back?",
+      "expected_amount": 4000,
+      "got_amount": 4000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You will get back \u20b94,000 for the keyboard you purchased. This is calculated as 80% of the purchase price, which is below the cap.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 5.66,
+      "tool_calls": 5,
+      "approx_tokens": 782
+    },
+    {
+      "id": "q08",
+      "category": "compute_cap",
+      "question": "My phone bill was 1500 this month. How much is reimbursed?",
+      "expected_amount": 1000,
+      "got_amount": 1000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "The reimbursed amount for your phone bill of 1500 is 1000, as it is capped at that amount. Therefore, you will receive the maximum reimbursement allowed.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 6.19,
+      "tool_calls": 4,
+      "approx_tokens": 778
+    },
+    {
+      "id": "q09",
+      "category": "lookup_amount",
+      "question": "What is the monthly internet allowance for remote employees?",
+      "expected_amount": 2000,
+      "got_amount": 2000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "The monthly internet allowance for remote employees is \u20b92,000. No receipts are required for this allowance.",
+      "sources": [
+        "expense_policy.md",
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 3.69,
+      "tool_calls": 1,
+      "approx_tokens": 786
+    },
+    {
+      "id": "q10",
+      "category": "lookup_amount",
+      "question": "What is the hotel cap per night in a metro city?",
+      "expected_amount": 6000,
+      "got_amount": 6000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "The hotel cap per night in a metro city is \u20b96,000. This amount applies to all hotel stays in designated metro areas.",
+      "sources": [
+        "expense_policy.md",
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 3.89,
+      "tool_calls": 1,
+      "approx_tokens": 730
+    },
+    {
+      "id": "q11",
+      "category": "lookup_amount",
+      "question": "How much can I claim per financial year for courses and certifications?",
+      "expected_amount": 40000,
+      "got_amount": 40000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You can claim \u20b940,000 per financial year for courses, certifications, books, and conference tickets. Certification exam fees are reimbursed at 100% on the first attempt only.",
+      "sources": [
+        "expense_policy.md",
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 3.99,
+      "tool_calls": 1,
+      "approx_tokens": 823
+    },
+    {
+      "id": "q12",
+      "category": "lookup_amount",
+      "question": "How many sick days do I get per financial year?",
+      "expected_amount": 12,
+      "got_amount": 12.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You are entitled to 12 sick days per financial year, and these days do not carry over to the next year.",
+      "sources": [
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 4.92,
+      "tool_calls": 1,
+      "approx_tokens": 626
+    },
+    {
+      "id": "q13",
+      "category": "lookup_amount",
+      "question": "How many annual leave days do I get per year?",
+      "expected_amount": 21,
+      "got_amount": 21.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "As a full-time employee, you receive 21 days of annual leave per year. This leave is accrued monthly at a rate of 1.75 days.",
+      "sources": [
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 4.07,
+      "tool_calls": 1,
+      "approx_tokens": 617
+    },
+    {
+      "id": "q14",
+      "category": "lookup_amount",
+      "question": "What is the maximum number of unused leave days I can carry forward?",
+      "expected_amount": 10,
+      "got_amount": 10.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "The maximum number of unused annual leave days you can carry forward is 10 days into the next financial year. Any unused days above this limit will lapse on 31 March.",
+      "sources": [
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 4.12,
+      "tool_calls": 1,
+      "approx_tokens": 647
+    },
+    {
+      "id": "q15",
+      "category": "lookup_amount",
+      "question": "How many weeks of parental leave does a primary caregiver get?",
+      "expected_amount": 26,
+      "got_amount": 26.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "A primary caregiver receives 26 weeks of paid parental leave.",
+      "sources": [
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 3.13,
+      "tool_calls": 1,
+      "approx_tokens": 610
+    },
+    {
+      "id": "q16",
+      "category": "factual",
+      "question": "Do I need a medical certificate if I am sick for 2 days?",
+      "expected_amount": null,
+      "got_amount": 3.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You do not need a medical certificate if you are sick for 2 days. A medical certificate is only required for absences of 3 consecutive days or more.",
+      "sources": [
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 4.14,
+      "tool_calls": 1,
+      "approx_tokens": 629
+    },
+    {
+      "id": "q17",
+      "category": "factual",
+      "question": "Are gym memberships reimbursed?",
+      "expected_amount": null,
+      "got_amount": 0.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "Gym memberships are not reimbursed according to the company policy. This includes any personal entertainment expenses.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 3.68,
+      "tool_calls": 1,
+      "approx_tokens": 751
+    },
+    {
+      "id": "q18",
+      "category": "factual",
+      "question": "Can I encash my unused sick leave?",
+      "expected_amount": null,
+      "got_amount": 0.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "No, sick leave cannot be encashed according to the company policy. Only annual leave is eligible for encashment.",
+      "sources": [
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 5.02,
+      "tool_calls": 1,
+      "approx_tokens": 603
+    },
+    {
+      "id": "q19",
+      "category": "unanswerable",
+      "question": "Does the company pay for my dog's vet bills?",
+      "expected_amount": null,
+      "got_amount": 0.0,
+      "expected_supported": false,
+      "got_supported": true,
+      "answer": "The company does not pay for your dog's vet bills. This expense is categorized as personal and is explicitly listed as non-reimbursable.",
+      "sources": [
+        "expense_policy.md",
+        "leave_policy.md"
+      ],
+      "passed": false,
+      "failures": [
+        "supported_by_policy expected False, got True"
+      ],
+      "latency": 4.98,
+      "tool_calls": 1,
+      "approx_tokens": 640
+    },
+    {
+      "id": "q20",
+      "category": "unanswerable",
+      "question": "What is the visa reimbursement policy for working remotely from Bali?",
+      "expected_amount": null,
+      "got_amount": 0.0,
+      "expected_supported": false,
+      "got_supported": false,
+      "answer": "The company policy does not specifically mention a visa reimbursement policy for working remotely from Bali. However, it outlines various reimbursement policies for home office equipment, internet and phone expenses, travel, and learning and development.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 5.4,
+      "tool_calls": 1,
+      "approx_tokens": 889
+    }
+  ]
+}

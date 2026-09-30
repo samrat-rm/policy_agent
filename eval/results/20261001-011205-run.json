@@ -1,0 +1,382 @@
+{
+  "summary": {
+    "tag": "run",
+    "timestamp": "20261001-011205",
+    "model": "gpt-4o-mini",
+    "score": "1/20",
+    "accuracy_pct": 5.0,
+    "latency_p50": 0.0,
+    "latency_p95": 0.0,
+    "latency_mean": 1.33,
+    "avg_tool_calls": 0.1,
+    "by_category": {
+      "compute_cap": "1/7",
+      "compute_multi": "0/1",
+      "factual": "0/3",
+      "lookup_amount": "0/7",
+      "unanswerable": "0/2"
+    }
+  },
+  "records": [
+    {
+      "id": "q01",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 40000. How much do I get back?",
+      "expected_amount": 25000,
+      "got_amount": 25000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You get back 25000.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 26.61,
+      "tool_calls": 3,
+      "approx_tokens": 793
+    },
+    {
+      "id": "q02",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 20000. What is my reimbursement?",
+      "expected_amount": 16000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6601-0c4caf762bbcd2340266f05a;2b301326-6840-4622-b14f-cd21bccafae0)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q03",
+      "category": "compute_cap",
+      "question": "I spent 12000 on an office chair. How much is reimbursed?",
+      "expected_amount": 7200,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6602-3870b63571d19f4517a8ef05;c5ea18c4-66c4-4f63-a17b-6738faae0aab)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q04",
+      "category": "compute_cap",
+      "question": "I bought an office chair for 30000. How much do I get back?",
+      "expected_amount": 15000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6602-182c7b92369ecdda0acc5250;896210ad-3287-46ab-a254-cd32fb1b0405)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q05",
+      "category": "compute_cap",
+      "question": "My desk cost 40000. What is my reimbursement?",
+      "expected_amount": 20000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6603-311ed817718570555c3b9274;35dbed01-ca2e-4c82-b7a9-f67905e4c9a3)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q06",
+      "category": "compute_multi",
+      "question": "I spent 12000 on an office chair and 30000 on a desk. What is my total reimbursement?",
+      "expected_amount": 25200,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6604-76b9281d10506e1a48d163d2;22bc4b3d-2b1a-4293-bb71-8bae2ff1cc8f)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q07",
+      "category": "compute_cap",
+      "question": "I bought a keyboard for 5000. How much do I get back?",
+      "expected_amount": 4000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6604-0e980afa2fe72f2a5ff2c1c5;91ff7f8f-82c7-48e7-93bb-031dea6dc760)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q08",
+      "category": "compute_cap",
+      "question": "My phone bill was 1500 this month. How much is reimbursed?",
+      "expected_amount": 1000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6605-1b1e7f2720cf402557771de3;3871bbc2-121d-4e09-904d-b1d210a2beee)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q09",
+      "category": "lookup_amount",
+      "question": "What is the monthly internet allowance for remote employees?",
+      "expected_amount": 2000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6605-10b1ec761d8a8b265348f4e6;5cafb96d-4340-4485-9080-545b5e1206ff)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q10",
+      "category": "lookup_amount",
+      "question": "What is the hotel cap per night in a metro city?",
+      "expected_amount": 6000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6606-42008d2c0aa9aef214617d83;b6fb13c6-8024-48ba-9d4f-7d09917ec4a1)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q11",
+      "category": "lookup_amount",
+      "question": "How much can I claim per financial year for courses and certifications?",
+      "expected_amount": 40000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6607-0d977e4859dba04248d56a4a;ffe2df17-30f5-4bbb-9d8f-661309640a5b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q12",
+      "category": "lookup_amount",
+      "question": "How many sick days do I get per financial year?",
+      "expected_amount": 12,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6607-76a99bd13152b7cc389016e2;20f88052-f9b0-42aa-827d-71f5cecbfef3)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q13",
+      "category": "lookup_amount",
+      "question": "How many annual leave days do I get per year?",
+      "expected_amount": 21,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6608-612ab28019af1bcf6c060c53;1564c7a3-5420-4268-b0f5-8d0ad8799bd4)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q14",
+      "category": "lookup_amount",
+      "question": "What is the maximum number of unused leave days I can carry forward?",
+      "expected_amount": 10,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6609-3c4a90b6616ae2792d292055;fd9aad53-9b87-4d47-be9a-620524c99d1f)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q15",
+      "category": "lookup_amount",
+      "question": "How many weeks of parental leave does a primary caregiver get?",
+      "expected_amount": 26,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6609-73194e4418956906560b5431;ff409d9c-3ff1-4991-98f9-61f1a021c2b8)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q16",
+      "category": "factual",
+      "question": "Do I need a medical certificate if I am sick for 2 days?",
+      "expected_amount": null,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd660a-55f6f9ae423302616ffa730d;ce85bcac-4d29-40eb-903b-c372a1e9f158)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q17",
+      "category": "factual",
+      "question": "Are gym memberships reimbursed?",
+      "expected_amount": null,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd660a-22903db4202b2ef40e1b6c52;d32743f1-c8e3-456d-92fd-23a28a66a912)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q18",
+      "category": "factual",
+      "question": "Can I encash my unused sick leave?",
+      "expected_amount": null,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd660b-033384c755f9e6673f98b148;b3eefe8f-5144-4178-9936-3260ac460458)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q19",
+      "category": "unanswerable",
+      "question": "Does the company pay for my dog's vet bills?",
+      "expected_amount": null,
+      "got_amount": null,
+      "expected_supported": false,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd660b-5e4e4d791a3f66b64e6a9fde;7e55fc7b-3971-4188-b951-e22fac456bd9)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    },
+    {
+      "id": "q20",
+      "category": "unanswerable",
+      "question": "What is the visa reimbursement policy for working remotely from Bali?",
+      "expected_amount": null,
+      "got_amount": null,
+      "expected_supported": false,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd660c-1181cf98307992091609a054;b28eed0a-c3ab-4253-85fd-af60e429a4fa)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    }
+  ]
+}

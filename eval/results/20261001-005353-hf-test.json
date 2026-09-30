@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "tag": "hf-test",
+    "timestamp": "20261001-005353",
+    "model": "llama3.1",
+    "score": "1/2",
+    "accuracy_pct": 50.0,
+    "latency_p50": 19.09,
+    "latency_p95": 14.97,
+    "latency_mean": 19.09,
+    "avg_tool_calls": 2.5,
+    "by_category": {
+      "compute_cap": "1/2"
+    }
+  },
+  "records": [
+    {
+      "id": "q01",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 40000. How much do I get back?",
+      "expected_amount": 25000,
+      "got_amount": 25000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "You get back 25000.",
+      "sources": [
+        "expense_policy.md",
+        "leave_policy.md"
+      ],
+      "passed": true,
+      "failures": [],
+      "latency": 23.22,
+      "tool_calls": 3,
+      "approx_tokens": 855
+    },
+    {
+      "id": "q02",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 20000. What is my reimbursement?",
+      "expected_amount": 16000,
+      "got_amount": 25000.0,
+      "expected_supported": true,
+      "got_supported": true,
+      "answer": "The reimbursement for the monitor is capped at \u20b925,000.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": false,
+      "failures": [
+        "expected 16000, got 25000.0"
+      ],
+      "latency": 14.97,
+      "tool_calls": 2,
+      "approx_tokens": 769
+    }
+  ]
+}

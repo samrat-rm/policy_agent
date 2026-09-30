@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "tag": "hf-test",
+    "timestamp": "20261001-005036",
+    "model": "llama3.1",
+    "score": "0/2",
+    "accuracy_pct": 0.0,
+    "latency_p50": 9.26,
+    "latency_p95": 0.0,
+    "latency_mean": 9.26,
+    "avg_tool_calls": 3.5,
+    "by_category": {
+      "compute_cap": "0/2"
+    }
+  },
+  "records": [
+    {
+      "id": "q01",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 40000. How much do I get back?",
+      "expected_amount": 25000,
+      "got_amount": 0.0,
+      "expected_supported": true,
+      "got_supported": false,
+      "answer": "The policy documents do not cover the question.",
+      "sources": [
+        "expense_policy.md"
+      ],
+      "passed": false,
+      "failures": [
+        "expected 25000, got 0.0",
+        "supported_by_policy expected True, got False"
+      ],
+      "latency": 18.52,
+      "tool_calls": 7,
+      "approx_tokens": 1199
+    },
+    {
+      "id": "q02",
+      "category": "compute_cap",
+      "question": "I bought a monitor for 20000. What is my reimbursement?",
+      "expected_amount": 16000,
+      "got_amount": null,
+      "expected_supported": true,
+      "got_supported": null,
+      "answer": "",
+      "sources": [],
+      "passed": false,
+      "failures": [
+        "exception: agent_node failed after 2 attempts: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6abd6104-6464e015790ce07d42afdcb7;c161c470-c9a1-4fb7-b04e-36233a2a6dd5)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ],
+      "latency": 0.0,
+      "tool_calls": 0,
+      "approx_tokens": 0
+    }
+  ]
+}
